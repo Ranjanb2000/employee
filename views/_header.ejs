@@ -1,0 +1,23 @@
+<header>
+    
+    <ul>
+      <% if (locals.user) { %>
+        <li class="main">
+          <% if (locals.user.type=="admin") { %>
+          <a href="/users/profile"><button>Admin</button></a>
+          <% } else {%>
+            <a href="/users/profile"><button>Employee</button></a>
+          <% } %>
+        </li>
+        <li class="main">
+          <a href="/users/sign-out"><button>sign out</button></a>
+        </li>
+        <% } else {%>
+          <li class="main">
+            <a href="/users/sign-in"><button>sign-in</button></a>
+          </li>
+          <%}%>
+          
+    </ul>
+  </header>
+  <hr>

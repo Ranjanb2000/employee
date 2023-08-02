@@ -1,0 +1,39 @@
+h1{
+    text-transform: capitalize;
+}
+span{
+    display: inline-block;
+    width: 60%;
+    font-size: 1.5rem;
+}
+form{
+    margin-left: 30%;
+    border: 1px solid;
+    width: 35%;
+    padding: 2%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+input{
+    width: 40%;
+    font-size: 1.5rem;
+}
+select{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+button{
+    font-size: 1.5rem;
+    
+}
+h2{
+    text-transform: capitalize;
+    text-align: center;
+}
+p{
+    text-transform: capitalize;
+    font-size:1.5rem;
+}
+.sup{
+    text-align: center;
+}

@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+        <h1>Welcome to your profile <%=locals.user.type%></h1>
+        <h1><%=locals.user.name%></h1>
+
+<% if(locals.user.type=="admin") { %>
+<div>
+        <h2>Employees list on your company</h2>
+        <% for (user of users){%>
+                <% if(user.type=="employee") { %>
+                <div>
+                        <a class="list" href="/users/employee/<%=user.id%>"><%=user.name%></a>
+                        
+                        <% if(user.feedbackPending.length==0) { %>
+                                <a class="send" href="/users/newfeedback/<%=user.id%>"><button>send a feedback request</button></a>
+                        <% } else if(user.feedbackRecieved.length==user.feedbackPending.length+user.feedbackRecieved.length) { %>
+                                <span class="req">feedback submitted by employee</span>
+                        <% } else { %>
+                                <span class="req">request already sent</span>
+                        <% } %>
+                        <a class="delete" href="/users/employee/delete/<%=user.id%>"><img src="https://cdn-icons-png.flaticon.com/512/6048/6048190.png"></a>
+                        <hr>
+                </div>
+                <% } else { %>
+                        
+                <% } %>
+        <%} %>
+        <a class="send" href="/users/sign-up"><button>add new employee</button></a>
+</div>
+       
+        <% } else { %>
+                <% if(pruser.feedbackPending.length>0) { %>
+                        <h2>Admin asked you to submit feedback on the below Employees urgently</h2>
+               <% for(user of pruser.feedbackPending) {%>
+                
+                <p></p>
+                        <div class="feed"><a href="/users/employee/addfeedback/<%=user.id%>"><%=user.name%></a></div>
+                <%} %>
+                <% } else { %>
+                      
+                      <% for (user of pruser.feedbackRecieved){%>
+                        <% if(user.sender.type=="employee") { %>
+                        <div class="para">
+                                
+                                <p>feedback by employee <%=user.sender.name%> </p>
+                                <p>About the <%=pruser.name%> : <%=user.about%></p>
+                                <p>Ratings for <%=pruser.name%> : <%=user.rating%></p>
+                                <% } %>
+                                <hr>
+                                </div>
+                        <%} %>
+                <% } %>
+        <% } %> 

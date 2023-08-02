@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/employee.css">
+<h1>The Information of the employee name : <%=user.name%></h1>
+
+        <a href="/users/newfeedback/<%=user.id%>"><button>send a new feedback request</button></a>       
+<form action="/users/edit/<%=user.id%>" method="POST"> 
+    <p><span>Name : </span><input type="text" name="name" placeholder="Your Name" value="<%=user.name%>" required></p>
+    <p><span>Email : </span><input type="email" name="email" placeholder="Your Email" value="<%=user.email%>" required></p>
+    <p><span>Is he admin or an employee : </span><select name="type" value="<%=user.rating%>">
+        <option>employee</option>
+        <option>admin</option>
+        
+    </select></p>
+    <p><span>Performance rating by admin : </span>
+    <select name="rating">
+        <option selected><%=user.rating%></option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select></p><br>
+    <button type="submit">Update</button>
+</form>
+
+<% if(user.feedbackRecieved.length>0) { %>
+    <h2>feedback of this employee by other employees</h2>
+    <% for(feedback of user.feedbackRecieved) { %>
+        <div class="sup">
+            <% if(feedback.sender.type=="employee") { %>
+            <hr>
+            <p>employee name: <%=feedback.sender.name%></p>
+            <p>about the <u><%=user.name%></u> : <%=feedback.about%></p>
+            <p>ratings for the <u><%=user.name%></u> : <%=feedback.rating%></p>
+            <hr>
+            <% } %>
+        </div>
+    <% } %>
+<% } %>

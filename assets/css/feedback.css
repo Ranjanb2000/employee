@@ -1,0 +1,19 @@
+form{
+    margin-top: 3%;
+    margin-left: 20%;
+    width:45%;
+    font-size: 1.5rem;
+    border: 1px solid;
+    text-transform: capitalize;
+    padding: 3%;
+}
+span{
+    display: inline-block;
+    width: 50%;
+}
+input{
+    font-size: 1.5rem;
+}
+option{
+    font-size: 1.5rem;
+}

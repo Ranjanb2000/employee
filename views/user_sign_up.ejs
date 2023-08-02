@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/css/company.css">
+<h1>new employee</h1>
+
+<form action="/users/create" method="POST"> 
+    
+        <div>company name : </div>
+        <select name="company">
+            <option value="<%= user.company.name %>"> <%= user.company.name %> </option>
+        </select>
+    
+    <p><div>Employee name : </div><input type="text" name="name" placeholder="name" required></p>
+    <p><div>Email : </div><input type="text" name="email" placeholder="email" required></p>
+    <p><div>password : </div><input type="password" name="password" placeholder="password" required></p>
+    <p><div>confirm password : </div><input type="password" name="cpassword" placeholder="confirm password" required></p>
+    <p><input type="submit" value="create"></p>
+</form>

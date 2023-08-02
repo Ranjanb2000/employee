@@ -1,0 +1,38 @@
+div{
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: capitalize;
+    width: 40%;
+}
+form{
+    margin-left: 20%;
+    border: 1px solid;
+    width: 55%;
+    padding: 3%;
+    border-radius: 10px;
+}
+input{
+    font-size: 2rem;
+    
+}
+button{
+    font-size: 2rem;
+    margin-top: 2%;
+    border-radius: 3px;
+}
+textarea{
+    font-size: 2rem;
+    
+    text-transform: capitalize;
+}
+p{
+    text-transform: capitalize;
+}
+h1{
+    text-align: center;
+    text-transform: capitalize;
+}
+option{
+    font-size: 2rem;
+    display: inline-block;
+}

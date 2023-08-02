@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/feedback.css">
+<h1>Feed back for the employee <u><%=user.name%></u></h1>
+<form action="/users/employee/createFeedback/<%=user.id%>" method="post">
+    <p><span>Feedback of the employee :</span>
+    <input type="text" name="about" placeholder="about the employee"></p>
+    <p><span>rating for this employee : </span>
+    <select name="rating">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select></p>
+    <li><input type="submit"></li>
+</form>

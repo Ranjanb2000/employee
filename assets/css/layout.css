@@ -1,0 +1,35 @@
+body{
+    margin: px;
+    
+}
+li{
+    list-style-type: none;
+    display: inline;
+}
+header{
+    margin-top: 1%;
+    margin-left: 84%;
+}
+.main{
+    margin-right: 5%;
+    margin-top: 10%;
+}
+.main button{
+    border: none;
+    padding: 3%;
+    border-radius: 40%;
+    font-size: 0.9rem;
+    color: brown;
+    background-color: rgba(240, 255, 246, 0.555);
+}
+.main button:hover{
+    background-color: rgba(240, 255, 246, 0.13);
+    border: 1px solid;
+}
+.company{
+    text-align: center;
+    text-transform: capitalize;
+}
+.create{
+    font-size: 3rem;
+}
