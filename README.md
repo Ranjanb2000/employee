@@ -10,7 +10,7 @@ MongoDB
 EJS
 
 Install dependencies
-npm install --save
+"npm install --save"
 
 file Strcuture
 employee-review-system
